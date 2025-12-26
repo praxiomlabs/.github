@@ -1,0 +1,103 @@
+# Security Insights for Praxiom Labs
+# OpenSSF Security Insights Specification v2.0.0
+# https://github.com/ossf/security-insights-spec
+
+header:
+  schema-version: "2.0.0"
+  last-updated: "2025-12-26"
+  last-reviewed: "2025-12-26"
+  project-url: https://github.com/praxiomlabs
+
+project-lifecycle:
+  status: active
+  bug-fixes-only: false
+  roadmap: https://github.com/praxiomlabs/mcpkit/blob/main/ROADMAP.md
+
+contribution-policy:
+  accepts-pull-requests: true
+  accepts-automated-pull-requests: true
+  automated-tools-list:
+    - dependabot
+    - renovate
+  contributing-policy: https://github.com/praxiomlabs/.github/blob/main/CONTRIBUTING.md
+  code-of-conduct: https://github.com/praxiomlabs/.github/blob/main/CODE_OF_CONDUCT.md
+
+documentation:
+  - https://docs.rs/mcpkit
+  - https://docs.rs/mssql-client
+  - https://github.com/praxiomlabs/mcpkit#readme
+  - https://github.com/praxiomlabs/rust-mssql-driver#readme
+  - https://github.com/praxiomlabs/mssql-mcp-server#readme
+
+security-policy: https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
+
+security-contacts:
+  - type: email
+    value: security@praxiomlabs.org
+    primary: true
+  - type: web
+    value: https://github.com/praxiomlabs/.github/security/advisories/new
+    primary: false
+
+vulnerability-reporting:
+  accepts-vulnerability-reports: true
+  email-contact: security@praxiomlabs.org
+  security-policy: https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
+  bug-bounty-available: false
+  bug-bounty-url: null
+  in-scope:
+    - mcpkit (MCP SDK)
+    - rust-mssql-driver (SQL Server driver)
+    - mssql-mcp-server (MCP server)
+  out-of-scope:
+    - Third-party dependencies (report to upstream)
+    - Issues in the MCP specification itself
+  pgp-key: null
+  comment: |
+    We take security seriously. Please report vulnerabilities privately via
+    GitHub's Security Advisory feature or email. Do not open public issues
+    for security concerns. We aim to acknowledge reports within 48 hours.
+
+security-artifacts:
+  self-assessment:
+    self-assessment-created: true
+    evidence-url:
+      - https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
+  threat-model:
+    threat-model-created: false
+    comment: Threat models are documented in individual project SECURITY.md files
+  static-analysis:
+    static-analysis-created: true
+    tool-url:
+      - https://github.com/rust-lang/rust-clippy
+      - https://github.com/rustsec/rustsec
+    evidence-url: null
+    comment: All projects use cargo clippy and cargo audit in CI
+
+dependencies:
+  sbom:
+    sbom-created: false
+    sbom-url: null
+    comment: SBOM can be generated via cargo-sbom
+  dependencies-lifecycle:
+    policy-url: null
+    comment: Dependencies are regularly audited via cargo audit
+  env-dependencies-policy:
+    policy-url: null
+    comment: Pure Rust with minimal system dependencies; uses rustls for TLS
+
+distribution:
+  - name: crates.io
+    url: https://crates.io/crates/mcpkit
+  - name: crates.io
+    url: https://crates.io/crates/mssql-client
+  - name: GitHub Releases
+    url: https://github.com/praxiomlabs/mcpkit/releases
+
+repositories:
+  - url: https://github.com/praxiomlabs/mcpkit
+    comment: Rust SDK for Model Context Protocol
+  - url: https://github.com/praxiomlabs/rust-mssql-driver
+    comment: Async SQL Server driver for Rust
+  - url: https://github.com/praxiomlabs/mssql-mcp-server
+    comment: MCP server for SQL Server databases

@@ -1,0 +1,53 @@
+# CODEOWNERS for Praxiom Labs organization-wide community health files
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# These owners will be requested for review when someone opens a pull request
+# that modifies files in this repository.
+#
+# The last matching pattern takes precedence.
+
+# =============================================================================
+# Default Owners
+# =============================================================================
+# All files require review from the maintainers team by default
+*                                   @praxiomlabs/maintainers
+
+# =============================================================================
+# Community Health Files
+# =============================================================================
+# Code of Conduct changes require careful review
+CODE_OF_CONDUCT.md                  @praxiomlabs/maintainers
+
+# Security policy changes are sensitive
+SECURITY.md                         @praxiomlabs/maintainers @praxiomlabs/security
+
+# Contributing guidelines affect the entire community
+CONTRIBUTING.md                     @praxiomlabs/maintainers
+
+# Support documentation
+SUPPORT.md                          @praxiomlabs/maintainers
+
+# =============================================================================
+# Templates
+# =============================================================================
+# Issue and PR templates affect contributor experience
+ISSUE_TEMPLATE/                     @praxiomlabs/maintainers
+PULL_REQUEST_TEMPLATE.md            @praxiomlabs/maintainers
+
+# =============================================================================
+# Organization Profile
+# =============================================================================
+# Profile README is the public face of the organization
+profile/                            @praxiomlabs/maintainers
+
+# =============================================================================
+# Funding & Sponsorship
+# =============================================================================
+FUNDING.yml                         @praxiomlabs/maintainers
+
+# =============================================================================
+# Security & Compliance
+# =============================================================================
+# Security insights require security team review
+security-insights.yml               @praxiomlabs/maintainers @praxiomlabs/security
+CODEOWNERS                          @praxiomlabs/maintainers

@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](https://github.com/praxiomlabs/.github/blob/main/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](https://github.com/praxiomlabs/.github/blob/main/CODE_OF_CONDUCT.md)
 [![MSRV](https://img.shields.io/badge/MSRV-1.85+-orange.svg)](https://www.rust-lang.org/)
+[![OpenSSF Security](https://img.shields.io/badge/OpenSSF-Security%20Insights-green.svg)](https://github.com/praxiomlabs/.github/blob/main/security-insights.yml)
 
 **High-performance Rust infrastructure for AI systems and database connectivity.**
 

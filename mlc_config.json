@@ -1,0 +1,50 @@
+{
+  "$schema": "https://raw.githubusercontent.com/tcort/markdown-link-check/master/src/config.schema.json",
+  "ignorePatterns": [
+    {
+      "pattern": "^https://github.com/praxiomlabs/.*/labels/",
+      "comment": "GitHub label URLs may not resolve without authentication"
+    },
+    {
+      "pattern": "^https://github.com/search\\?",
+      "comment": "GitHub search URLs are dynamic and may not resolve correctly"
+    },
+    {
+      "pattern": "^https://github.com/sponsors/",
+      "comment": "Sponsor pages require authentication to verify"
+    },
+    {
+      "pattern": "^https://github.com/praxiomlabs/.*/security/advisories/new",
+      "comment": "Security advisory creation page requires authentication"
+    },
+    {
+      "pattern": "^mailto:",
+      "comment": "Email links cannot be verified by HTTP check"
+    }
+  ],
+  "replacementPatterns": [
+    {
+      "pattern": "^/",
+      "replacement": "{{BASEURL}}/"
+    }
+  ],
+  "httpHeaders": [
+    {
+      "urls": ["https://docs.rs/"],
+      "headers": {
+        "Accept": "text/html"
+      }
+    },
+    {
+      "urls": ["https://crates.io/"],
+      "headers": {
+        "Accept": "text/html"
+      }
+    }
+  ],
+  "timeout": "20s",
+  "retryOn429": true,
+  "retryCount": 3,
+  "fallbackRetryDelay": "30s",
+  "aliveStatusCodes": [200, 206, 301, 302, 307, 308]
+}
