@@ -287,4 +287,18 @@ See our [Security Policy](SECURITY.md) for responsible disclosure instructions.
 
 ## Commercial Support
 
-For commercial support inquiries, please open an issue in this repository with the "support" label, or reach out through the contact methods listed in individual project READMEs.
+For commercial support, consulting, or enterprise inquiries:
+
+| Method | Contact |
+|--------|---------|
+| **Email** | enterprise@praxiomlabs.org |
+| **GitHub** | Open an issue with the `support` label |
+
+We offer:
+
+- **Priority support** — Faster response times and dedicated assistance
+- **Custom development** — Feature development and integrations
+- **Consulting** — Architecture review, performance optimization, security audits
+- **Training** — Team workshops on MCP, Rust, and SQL Server integration
+
+For sponsorship opportunities, see our [GitHub Sponsors](https://github.com/sponsors/praxiomlabs) page.

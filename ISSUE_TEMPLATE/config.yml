@@ -1,5 +1,14 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Questions & Discussions
+    url: https://github.com/orgs/praxiomlabs/discussions
+    about: Ask questions and discuss ideas in GitHub Discussions
   - name: Security Vulnerabilities
     url: https://github.com/praxiomlabs/.github/security/advisories/new
     about: Report security vulnerabilities privately
+  - name: Documentation
+    url: https://docs.rs/mcpkit
+    about: Read the API documentation on docs.rs
+  - name: Support Guide
+    url: https://github.com/praxiomlabs/.github/blob/main/SUPPORT.md
+    about: Get help and find answers to common questions
