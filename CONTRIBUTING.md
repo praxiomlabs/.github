@@ -6,6 +6,10 @@ Thank you for your interest in contributing to Praxiom Labs projects! This docum
 
 All Praxiom Labs projects follow the [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct). Please be respectful and constructive in all interactions.
 
+## Governance
+
+We follow a meritocratic governance model. For details on roles, decision-making processes, and how to advance from contributor to maintainer, see our **[Governance Model](GOVERNANCE.md)**.
+
 ## Our Projects
 
 | Project | Description | Contributing Guide |
@@ -91,6 +95,72 @@ cargo install cargo-audit      # Security audits
 cargo install cargo-deny       # License/dependency checks
 ```
 
+### Developer Certificate of Origin (DCO)
+
+All contributions must be signed off to certify you have the right to submit the code. This is a lightweight alternative to a Contributor License Agreement (CLA).
+
+By signing off, you agree to the [Developer Certificate of Origin](https://developercertificate.org/):
+
+```
+Developer Certificate of Origin
+Version 1.1
+
+Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the best
+    of my knowledge, is covered under an appropriate open source
+    license and I have the right under that license to submit that
+    work with modifications, whether created in whole or in part
+    by me, under the same open source license (unless I am
+    permitted to submit under a different license), as indicated
+    in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including all
+    personal information I submit with it, including my sign-off) is
+    maintained indefinitely and may be redistributed consistent with
+    this project or the open source license(s) involved.
+```
+
+**How to sign off:**
+
+```bash
+# Sign off a single commit
+git commit -s -m "feat: add new feature"
+
+# Sign off when amending
+git commit --amend -s
+
+# Sign off all commits in a rebase
+git rebase --signoff main
+```
+
+This adds a `Signed-off-by` line to your commit:
+```
+Signed-off-by: Your Name <your.email@example.com>
+```
+
+**Configure Git for automatic sign-off:**
+
+```bash
+# Set your identity (required)
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+
+# Optional: Create an alias for signed commits
+git config --global alias.ci "commit -s"
+```
+
 ### Commit Messages
 
 We follow [Conventional Commits](https://www.conventionalcommits.org/):
@@ -166,9 +236,11 @@ For comprehensive guidance on specific topics:
 
 | Policy | Description |
 |--------|-------------|
+| **[GOVERNANCE.md](GOVERNANCE.md)** | Governance model, roles, decision-making, RFC process |
 | **[DEPENDENCIES.md](DEPENDENCIES.md)** | SBOM generation, dependency lifecycle, environment requirements |
 | **[VERSIONING.md](VERSIONING.md)** | Semantic versioning, MSRV policy, deprecation process |
 | **[THREAT_MODEL.md](THREAT_MODEL.md)** | Security threat analysis, trust boundaries, mitigations |
+| **[FUZZING.md](FUZZING.md)** | Fuzz testing policy, targets, and best practices |
 
 ## License
 

@@ -30,6 +30,8 @@ documentation:
   - https://github.com/praxiomlabs/mssql-mcp-server#readme
   - https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md
   - https://github.com/praxiomlabs/.github/blob/main/VERSIONING.md
+  - https://github.com/praxiomlabs/.github/blob/main/GOVERNANCE.md
+  - https://github.com/praxiomlabs/.github/blob/main/FUZZING.md
 
 security-policy: https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
 
@@ -65,6 +67,8 @@ security-artifacts:
     self-assessment-created: true
     evidence-url:
       - https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
+      - https://github.com/praxiomlabs/.github/blob/main/SECURITY.txt
+      - https://github.com/praxiomlabs/.github/blob/main/OPENSSF_SELF_ASSESSMENT.md
   threat-model:
     threat-model-created: true
     evidence-url:
@@ -83,6 +87,17 @@ security-artifacts:
     comment: |
       All projects use cargo clippy (linting), cargo audit (vulnerability scanning),
       and cargo deny (license/dependency policy) in CI pipelines.
+  fuzzing:
+    fuzzing-created: true
+    tool-url:
+      - https://github.com/rust-fuzz/cargo-fuzz
+      - https://github.com/rust-fuzz/honggfuzz-rs
+    evidence-url:
+      - https://github.com/praxiomlabs/.github/blob/main/FUZZING.md
+    comment: |
+      Fuzz testing using cargo-fuzz with libFuzzer backend. Targets protocol
+      parsers, input handlers, and trust boundary crossings. Continuous fuzzing
+      in CI with nightly deep fuzzing runs.
 
 dependencies:
   sbom:

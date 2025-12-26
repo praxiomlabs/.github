@@ -278,15 +278,28 @@ AI Client → MCP Protocol → mssql-mcp-server → mssql-client → SQL Server
 | Test Type | Scope | Frequency |
 |-----------|-------|-----------|
 | Unit tests for validation | Input handlers | Every PR |
-| Fuzzing | Protocol parsers | Monthly |
+| Fuzz testing (smoke) | Protocol parsers | Every PR (60s) |
+| Fuzz testing (deep) | Protocol parsers | Nightly (4h) |
 | Dependency audit | All dependencies | Daily (CI) |
 | Penetration testing | Full stack | Annually |
 
-### Fuzzing Targets
+### Fuzz Testing
 
-- TDS protocol parser (rust-mssql-driver)
-- MCP message parser (mcpkit)
-- SQL query validator (mssql-mcp-server)
+For comprehensive fuzz testing methodology, targets, and practices, see **[FUZZING.md](FUZZING.md)**.
+
+#### Key Fuzz Targets
+
+| Project | Target | Description |
+|---------|--------|-------------|
+| rust-mssql-driver | TDS protocol parser | Packet parsing and deserialization |
+| mcpkit | MCP message parser | JSON-RPC and transport framing |
+| mssql-mcp-server | SQL query validator | Query validation and sanitization |
+
+#### Fuzzing Tools
+
+- **Primary**: [cargo-fuzz](https://github.com/rust-fuzz/cargo-fuzz) with libFuzzer
+- **Alternative**: [honggfuzz-rs](https://github.com/rust-fuzz/honggfuzz-rs)
+- **Sanitizers**: AddressSanitizer (default), UndefinedBehaviorSanitizer
 
 ---
 

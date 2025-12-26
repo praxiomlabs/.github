@@ -148,6 +148,7 @@ After:
 ## Checklist Before Requesting Review
 
 - [ ] I have read the [Contributing Guide](https://github.com/praxiomlabs/.github/blob/main/CONTRIBUTING.md)
+- [ ] All commits are signed off (`git commit -s`) per the [DCO](https://github.com/praxiomlabs/.github/blob/main/CONTRIBUTING.md#developer-certificate-of-origin-dco)
 - [ ] I have checked that this PR is not a duplicate
 - [ ] I have added appropriate labels (if I have permission)
 - [ ] I am ready for this PR to be reviewed

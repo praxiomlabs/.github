@@ -3,8 +3,11 @@
 [![License](https://img.shields.io/badge/license-MIT%2FApache--2.0-blue.svg)](https://github.com/praxiomlabs/.github/blob/main/LICENSE)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](https://github.com/praxiomlabs/.github/blob/main/CODE_OF_CONDUCT.md)
 [![MSRV](https://img.shields.io/badge/MSRV-1.85+-orange.svg)](https://www.rust-lang.org/)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/placeholder/badge)](https://www.bestpractices.dev/projects/placeholder)
+[![OpenSSF Scorecard](https://img.shields.io/ossf-scorecard/github.com/praxiomlabs/mcpkit?label=OpenSSF%20Scorecard)](https://scorecard.dev/viewer/?uri=github.com/praxiomlabs/mcpkit)
 [![OpenSSF Security Insights](https://img.shields.io/badge/OpenSSF-Security%20Insights%20v2.0-green.svg)](https://github.com/praxiomlabs/.github/blob/main/security-insights.yml)
 [![Threat Model](https://img.shields.io/badge/Threat%20Model-STRIDE-blueviolet.svg)](https://github.com/praxiomlabs/.github/blob/main/THREAT_MODEL.md)
+[![Fuzz Testing](https://img.shields.io/badge/Fuzz%20Testing-cargo--fuzz-yellow.svg)](https://github.com/praxiomlabs/.github/blob/main/FUZZING.md)
 [![Matrix](https://img.shields.io/badge/Matrix-%23praxiomlabs-000.svg?logo=matrix)](https://matrix.to/#/#praxiomlabs:matrix.org)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/praxiomlabs)
 
@@ -117,9 +120,13 @@ let rows = client.query("SELECT * FROM users WHERE id = @p1", &[&1]).await?;
 | **mcpkit API Docs** | [docs.rs/mcpkit](https://docs.rs/mcpkit) |
 | **mssql-client API Docs** | [docs.rs/mssql-client](https://docs.rs/mssql-client) |
 | **MCP Specification** | [modelcontextprotocol.io](https://modelcontextprotocol.io/specification/2025-11-25) |
+| **Governance Model** | [GOVERNANCE.md](https://github.com/praxiomlabs/.github/blob/main/GOVERNANCE.md) |
 | **Dependency Policy** | [DEPENDENCIES.md](https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md) |
 | **Versioning Policy** | [VERSIONING.md](https://github.com/praxiomlabs/.github/blob/main/VERSIONING.md) |
 | **Threat Model** | [THREAT_MODEL.md](https://github.com/praxiomlabs/.github/blob/main/THREAT_MODEL.md) |
+| **Fuzz Testing** | [FUZZING.md](https://github.com/praxiomlabs/.github/blob/main/FUZZING.md) |
+| **Security Policy** | [SECURITY.txt](https://github.com/praxiomlabs/.github/blob/main/SECURITY.txt) (RFC 9116) |
+| **OpenSSF Self-Assessment** | [OPENSSF_SELF_ASSESSMENT.md](https://github.com/praxiomlabs/.github/blob/main/OPENSSF_SELF_ASSESSMENT.md) |
 
 ## Project Status
 

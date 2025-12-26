@@ -126,6 +126,14 @@ A: For pre-1.0 versions, breaking changes may occur in minor releases with docum
 
 A: Yes! See [THREAT_MODEL.md](THREAT_MODEL.md) for comprehensive STRIDE analysis covering all projects, including trust boundaries, threat actors, and mitigations.
 
+**Q: What is your governance model?**
+
+A: We follow a meritocratic governance model with clear roles (Community → Contributor → Reviewer → Maintainer). See [GOVERNANCE.md](GOVERNANCE.md) for details on decision-making, the RFC process, and how to advance in the project.
+
+**Q: Do you do fuzz testing?**
+
+A: Yes! We use cargo-fuzz with libFuzzer to continuously test protocol parsers and input handlers. See [FUZZING.md](FUZZING.md) for our fuzz testing methodology and targets.
+
 **Q: Which licenses are your dependencies allowed to use?**
 
 A: We only accept permissively-licensed dependencies (MIT, Apache-2.0, BSD, ISC, Zlib, CC0, Unlicense). Copyleft licenses (GPL, LGPL, AGPL) are prohibited. See [DEPENDENCIES.md](DEPENDENCIES.md#license-compliance).

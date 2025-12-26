@@ -139,14 +139,17 @@ Before submitting PRs:
 
 ## Related Policies
 
+- [SECURITY.txt](SECURITY.txt) — RFC 9116 machine-readable security policy
 - [THREAT_MODEL.md](THREAT_MODEL.md) — Comprehensive STRIDE threat analysis
+- [FUZZING.md](FUZZING.md) — Fuzz testing policy and methodology
 - [DEPENDENCIES.md](DEPENDENCIES.md) — SBOM generation and dependency security
 - [VERSIONING.md](VERSIONING.md) — Version support and security patch policy
 
 ## References
 
 ### Internal Resources
-- [OpenSSF Security Insights](security-insights.yml) — Machine-readable security metadata
+- [OpenSSF Security Insights](security-insights.yml) — Machine-readable security metadata (v2.0)
+- [GOVERNANCE.md](GOVERNANCE.md) — Project governance and decision-making
 
 ### External Standards
 - [Rust Security Guidelines](https://anssi-fr.github.io/rust-guide/)
