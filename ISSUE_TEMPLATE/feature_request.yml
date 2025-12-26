@@ -8,6 +8,19 @@ body:
       value: |
         Thanks for suggesting a feature! Please describe what you'd like to see.
 
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project
+      description: Which project is this feature request for?
+      options:
+        - mcpkit
+        - rust-mssql-driver (mssql-client)
+        - mssql-mcp-server
+        - Other / Multiple projects
+    validations:
+      required: true
+
   - type: textarea
     id: problem
     attributes:
@@ -26,6 +39,43 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact
+      description: How would this feature impact your use of the project?
+      options:
+        - Critical - Blocking my adoption/usage
+        - High - Significant improvement to my workflow
+        - Medium - Nice to have, would use regularly
+        - Low - Minor convenience improvement
+    validations:
+      required: true
+
+  - type: dropdown
+    id: breaking-change
+    attributes:
+      label: Breaking Change
+      description: Would this feature require breaking changes to the existing API?
+      options:
+        - "No - Fully backward compatible"
+        - "Yes - Would require major version bump"
+        - "Unsure - Needs discussion"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: use-case
+    attributes:
+      label: Use Case Category
+      description: What type of use case is this for?
+      options:
+        - Production application
+        - Development tooling
+        - Testing/CI
+        - Learning/Experimentation
+        - Other
+
   - type: textarea
     id: api
     attributes:
@@ -40,6 +90,12 @@ body:
       description: Describe any alternative solutions or features you've considered
       placeholder: I also considered...
 
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context, screenshots, or references about the feature request here
+
   - type: checkboxes
     id: contribution
     attributes:
@@ -47,3 +103,14 @@ body:
       description: Would you be willing to help implement this feature?
       options:
         - label: I would be willing to submit a PR to implement this feature
+        - label: I can help with testing or documentation
+
+  - type: checkboxes
+    id: searched
+    attributes:
+      label: Before Submitting
+      description: Please confirm
+      options:
+        - label: I have searched existing issues/discussions to ensure this feature hasn't already been requested
+          required: true
+        - label: I have read the project's roadmap (if available) to check if this is already planned

@@ -1,8 +1,45 @@
-# Funding options for Praxiom Labs projects
+# Funding options for Praxiom Labs open-source projects
 # https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/displaying-a-sponsor-button-in-your-repository
+#
+# All supported platforms (as of 2025):
+# - github: GitHub Sponsors
+# - open_collective: Open Collective
+# - ko_fi: Ko-fi
+# - patreon: Patreon
+# - liberapay: Liberapay
+# - issuehunt: IssueHunt
+# - polar: Polar
+# - buy_me_a_coffee: Buy Me a Coffee
+# - thanks_dev: thanks.dev
+# - tidelift: Tidelift
+# - community_bridge: LFX Mentorship (formerly CommunityBridge)
+# - custom: Up to 4 custom URLs
 
+# Primary funding method - GitHub Sponsors
 github: [praxiomlabs]
-# patreon:
-# open_collective:
-# ko_fi:
-# custom: ["https://example.com/sponsor"]
+
+# Open Collective - For organizational/corporate sponsors
+# Enables tax-deductible donations and transparent expense tracking
+# To activate: Create collective at https://opencollective.com/create
+# open_collective: praxiomlabs
+
+# Alternative donation platforms (uncomment when accounts are created)
+# ko_fi: praxiomlabs
+# liberapay: praxiomlabs
+# polar: praxiomlabs
+# buy_me_a_coffee: praxiomlabs
+
+# Subscription-based support
+# patreon: praxiomlabs
+
+# Issue-based funding
+# issuehunt: praxiomlabs
+
+# Enterprise/dependency funding
+# tidelift: "cargo/mssql-client"
+# thanks_dev: gh/praxiomlabs
+
+# Custom funding page (up to 4 URLs)
+# custom:
+#   - "https://praxiomlabs.org/sponsor"
+#   - "https://praxiomlabs.org/enterprise"
