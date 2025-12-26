@@ -18,6 +18,32 @@ Each project includes:
 - Example code in `examples/` directories
 - Architecture documentation (where applicable)
 
+## Community Channels
+
+Join our community for real-time discussions, help, and collaboration:
+
+| Platform | Link | Best For |
+|----------|------|----------|
+| **Matrix** | [#praxiomlabs:matrix.org](https://matrix.to/#/#praxiomlabs:matrix.org) | Real-time chat, open protocol (recommended) |
+| **Discord** | [Praxiom Labs Discord](https://discord.gg/praxiomlabs) | Real-time chat, voice channels |
+| **GitHub Discussions** | [Discussions](https://github.com/orgs/praxiomlabs/discussions) | Long-form Q&A, RFCs, announcements |
+
+### Channel Guidelines
+
+- **#general** — Introductions, general discussion
+- **#help** — Technical questions and troubleshooting
+- **#mcpkit** — MCP SDK specific discussions
+- **#mssql** — SQL Server driver discussions
+- **#announcements** — Release notes and updates (read-only)
+
+### Why Matrix and Discord?
+
+We offer both platforms to meet the community where they are:
+
+- **Matrix** is an open, decentralized protocol — ideal for FOSS projects
+- **Discord** has broader adoption and familiar UX for many developers
+- Channels are bridged where possible for cross-platform communication
+
 ## Asking Questions
 
 ### GitHub Issues
@@ -78,6 +104,35 @@ A: Projects at version 0.x are under active development and may have breaking ch
 **Q: How do I report a security vulnerability?**
 
 A: Do NOT open a public issue. See our [Security Policy](SECURITY.md) for private reporting instructions.
+
+**Q: How do I generate an SBOM for your crates?**
+
+A: We document SBOM generation in [DEPENDENCIES.md](DEPENDENCIES.md). Quick start:
+```bash
+cargo install cargo-sbom
+cargo sbom --output-format cyclone_dx_json_1_4 > sbom.cdx.json
+```
+We support both SPDX and CycloneDX formats.
+
+**Q: What is your MSRV policy?**
+
+A: All projects require Rust 1.85+ (2024 Edition). MSRV bumps require a minor version increment. See [VERSIONING.md](VERSIONING.md) for full details.
+
+**Q: How do you handle breaking changes?**
+
+A: For pre-1.0 versions, breaking changes may occur in minor releases with documentation in CHANGELOG. Post-1.0, we follow strict semantic versioning with deprecation cycles. See [VERSIONING.md](VERSIONING.md).
+
+**Q: Do you have a threat model?**
+
+A: Yes! See [THREAT_MODEL.md](THREAT_MODEL.md) for comprehensive STRIDE analysis covering all projects, including trust boundaries, threat actors, and mitigations.
+
+**Q: Which licenses are your dependencies allowed to use?**
+
+A: We only accept permissively-licensed dependencies (MIT, Apache-2.0, BSD, ISC, Zlib, CC0, Unlicense). Copyleft licenses (GPL, LGPL, AGPL) are prohibited. See [DEPENDENCIES.md](DEPENDENCIES.md#license-compliance).
+
+**Q: How do I join the community chat?**
+
+A: Join us on [Matrix](https://matrix.to/#/#praxiomlabs:matrix.org) (recommended for FOSS) or [Discord](https://discord.gg/praxiomlabs). Channels are bridged where possible.
 
 ### mcpkit (MCP SDK)
 

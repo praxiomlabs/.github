@@ -3,6 +3,12 @@ contact_links:
   - name: Questions & Discussions
     url: https://github.com/orgs/praxiomlabs/discussions
     about: Ask questions and discuss ideas in GitHub Discussions
+  - name: Matrix Chat
+    url: https://matrix.to/#/#praxiomlabs:matrix.org
+    about: Real-time community chat on Matrix (open protocol)
+  - name: Discord Server
+    url: https://discord.gg/praxiomlabs
+    about: Real-time community chat on Discord
   - name: Security Vulnerabilities
     url: https://github.com/praxiomlabs/.github/security/advisories/new
     about: Report security vulnerabilities privately

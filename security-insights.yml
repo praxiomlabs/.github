@@ -28,6 +28,8 @@ documentation:
   - https://github.com/praxiomlabs/mcpkit#readme
   - https://github.com/praxiomlabs/rust-mssql-driver#readme
   - https://github.com/praxiomlabs/mssql-mcp-server#readme
+  - https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md
+  - https://github.com/praxiomlabs/.github/blob/main/VERSIONING.md
 
 security-policy: https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
 
@@ -64,27 +66,43 @@ security-artifacts:
     evidence-url:
       - https://github.com/praxiomlabs/.github/blob/main/SECURITY.md
   threat-model:
-    threat-model-created: false
-    comment: Threat models are documented in individual project SECURITY.md files
+    threat-model-created: true
+    evidence-url:
+      - https://github.com/praxiomlabs/.github/blob/main/THREAT_MODEL.md
+    comment: |
+      Comprehensive threat model covering all projects using STRIDE methodology.
+      Includes trust boundaries, threat actors, and mitigation strategies.
   static-analysis:
     static-analysis-created: true
     tool-url:
       - https://github.com/rust-lang/rust-clippy
       - https://github.com/rustsec/rustsec
-    evidence-url: null
-    comment: All projects use cargo clippy and cargo audit in CI
+      - https://github.com/EmbarkStudios/cargo-deny
+    evidence-url:
+      - https://github.com/praxiomlabs/.github/blob/main/CONTRIBUTING.md#pull-request-process
+    comment: |
+      All projects use cargo clippy (linting), cargo audit (vulnerability scanning),
+      and cargo deny (license/dependency policy) in CI pipelines.
 
 dependencies:
   sbom:
-    sbom-created: false
-    sbom-url: null
-    comment: SBOM can be generated via cargo-sbom
+    sbom-created: true
+    sbom-url:
+      - https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md#software-bill-of-materials-sbom
+    comment: |
+      SBOM generation documented with support for SPDX and CycloneDX formats.
+      Uses cargo-sbom, cargo-cyclonedx, and cargo-auditable tools.
+      SBOMs attached to GitHub Releases.
   dependencies-lifecycle:
-    policy-url: null
-    comment: Dependencies are regularly audited via cargo audit
+    policy-url: https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md#dependency-lifecycle-policy
+    comment: |
+      Rolling support model with active/maintenance/EOL phases.
+      MSRV 1.85+ with documented update cadence.
   env-dependencies-policy:
-    policy-url: null
-    comment: Pure Rust with minimal system dependencies; uses rustls for TLS
+    policy-url: https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md#environment-dependencies
+    comment: |
+      Pure Rust with minimal system dependencies. Uses rustls for TLS
+      (no OpenSSL required). Platform support documented.
 
 distribution:
   - name: crates.io
@@ -93,6 +111,8 @@ distribution:
     url: https://crates.io/crates/mssql-client
   - name: GitHub Releases
     url: https://github.com/praxiomlabs/mcpkit/releases
+  - name: GitHub Releases
+    url: https://github.com/praxiomlabs/rust-mssql-driver/releases
 
 repositories:
   - url: https://github.com/praxiomlabs/mcpkit
@@ -101,3 +121,5 @@ repositories:
     comment: Async SQL Server driver for Rust
   - url: https://github.com/praxiomlabs/mssql-mcp-server
     comment: MCP server for SQL Server databases
+  - url: https://github.com/praxiomlabs/.github
+    comment: Organization-wide community health files and policies

@@ -20,6 +20,18 @@
     {
       "pattern": "^mailto:",
       "comment": "Email links cannot be verified by HTTP check"
+    },
+    {
+      "pattern": "^https://matrix.to/",
+      "comment": "Matrix room links require client-side redirect"
+    },
+    {
+      "pattern": "^https://discord.gg/",
+      "comment": "Discord invite links may expire or require authentication"
+    },
+    {
+      "pattern": "^https://github.com/orgs/.*/discussions",
+      "comment": "Organization discussions may require authentication"
     }
   ],
   "replacementPatterns": [

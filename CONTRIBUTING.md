@@ -160,6 +160,16 @@ docs(readme): clarify installation steps
 - Performance improvements with benchmarks
 - Refactoring with justification
 
+## Additional Policies
+
+For comprehensive guidance on specific topics:
+
+| Policy | Description |
+|--------|-------------|
+| **[DEPENDENCIES.md](DEPENDENCIES.md)** | SBOM generation, dependency lifecycle, environment requirements |
+| **[VERSIONING.md](VERSIONING.md)** | Semantic versioning, MSRV policy, deprecation process |
+| **[THREAT_MODEL.md](THREAT_MODEL.md)** | Security threat analysis, trust boundaries, mitigations |
+
 ## License
 
 All Praxiom Labs projects are dual-licensed under:
@@ -172,6 +182,7 @@ By contributing, you agree that your contributions will be licensed under the sa
 ## Getting Help
 
 - **Questions**: Open a Discussion or Issue in the relevant repository
+- **Community Chat**: [Matrix](https://matrix.to/#/#praxiomlabs:matrix.org) or [Discord](https://discord.gg/praxiomlabs)
 - **Security Issues**: See our [Security Policy](SECURITY.md)
 - **General Inquiries**: Open an issue in this `.github` repository
 

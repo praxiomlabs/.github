@@ -89,6 +89,14 @@ Every pull request runs:
 - Connection strings are sanitized in error messages
 - Secrets are stored in appropriate types (`SecretString`)
 
+## Threat Model
+
+We maintain a comprehensive threat model covering all projects:
+
+- **[THREAT_MODEL.md](THREAT_MODEL.md)** — Full STRIDE analysis with trust boundaries, threat actors, and mitigations
+
+The threat model is reviewed quarterly and updated when significant architectural changes occur.
+
 ## Security Considerations by Project
 
 ### mcpkit (MCP SDK)
@@ -129,9 +137,24 @@ Before submitting PRs:
 - [ ] Dependencies are from trusted sources
 - [ ] `cargo audit` passes with no new advisories
 
+## Related Policies
+
+- [THREAT_MODEL.md](THREAT_MODEL.md) — Comprehensive STRIDE threat analysis
+- [DEPENDENCIES.md](DEPENDENCIES.md) — SBOM generation and dependency security
+- [VERSIONING.md](VERSIONING.md) — Version support and security patch policy
+
 ## References
 
+### Internal Resources
+- [OpenSSF Security Insights](security-insights.yml) — Machine-readable security metadata
+
+### External Standards
 - [Rust Security Guidelines](https://anssi-fr.github.io/rust-guide/)
 - [OWASP Top 10](https://owasp.org/www-project-top-ten/)
 - [RustSec Advisory Database](https://rustsec.org/)
 - [MCP Security Specification](https://modelcontextprotocol.io/specification/2025-11-25/basic/security)
+- [OpenSSF Security Insights Spec](https://github.com/ossf/security-insights-spec)
+- [OpenSSF OSPS Baseline](https://baseline.openssf.org/)
+- [TDS 8.0 Security](https://learn.microsoft.com/en-us/sql/relational-databases/security/networking/tds-8)
+- [CycloneDX SBOM Standard](https://cyclonedx.org/)
+- [SPDX SBOM Standard](https://spdx.dev/)
