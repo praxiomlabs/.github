@@ -92,7 +92,11 @@ Future 1.0+ releases may include LTS versions:
 
 ### Current MSRV
 
-All projects: **Rust 1.85+** (2024 Edition)
+All projects require **Rust 2024 Edition**:
+- Most projects: **Rust 1.85+**
+- rust-expect: **Rust 1.88+** (for let chains support)
+
+See each project's `Cargo.toml` for its specific MSRV.
 
 ### MSRV Policy
 

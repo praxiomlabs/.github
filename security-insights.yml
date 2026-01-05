@@ -4,8 +4,8 @@
 
 header:
   schema-version: "2.0.0"
-  last-updated: "2025-12-26"
-  last-reviewed: "2025-12-26"
+  last-updated: "2026-01-05"
+  last-reviewed: "2026-01-05"
   project-url: https://github.com/praxiomlabs
 
 project-lifecycle:
@@ -25,9 +25,11 @@ contribution-policy:
 documentation:
   - https://docs.rs/mcpkit
   - https://docs.rs/mssql-client
+  - https://docs.rs/rust-expect
   - https://github.com/praxiomlabs/mcpkit#readme
   - https://github.com/praxiomlabs/rust-mssql-driver#readme
   - https://github.com/praxiomlabs/mssql-mcp-server#readme
+  - https://github.com/praxiomlabs/rust-expect#readme
   - https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md
   - https://github.com/praxiomlabs/.github/blob/main/VERSIONING.md
   - https://github.com/praxiomlabs/.github/blob/main/GOVERNANCE.md
@@ -53,6 +55,7 @@ vulnerability-reporting:
     - mcpkit (MCP SDK)
     - rust-mssql-driver (SQL Server driver)
     - mssql-mcp-server (MCP server)
+    - rust-expect (Terminal automation library)
   out-of-scope:
     - Third-party dependencies (report to upstream)
     - Issues in the MCP specification itself
@@ -124,10 +127,14 @@ distribution:
     url: https://crates.io/crates/mcpkit
   - name: crates.io
     url: https://crates.io/crates/mssql-client
+  - name: crates.io
+    url: https://crates.io/crates/rust-expect
   - name: GitHub Releases
     url: https://github.com/praxiomlabs/mcpkit/releases
   - name: GitHub Releases
     url: https://github.com/praxiomlabs/rust-mssql-driver/releases
+  - name: GitHub Releases
+    url: https://github.com/praxiomlabs/rust-expect/releases
 
 repositories:
   - url: https://github.com/praxiomlabs/mcpkit
@@ -136,5 +143,7 @@ repositories:
     comment: Async SQL Server driver for Rust
   - url: https://github.com/praxiomlabs/mssql-mcp-server
     comment: MCP server for SQL Server databases
+  - url: https://github.com/praxiomlabs/rust-expect
+    comment: Async terminal automation library inspired by Expect
   - url: https://github.com/praxiomlabs/.github
     comment: Organization-wide community health files and policies

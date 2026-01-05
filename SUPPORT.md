@@ -11,6 +11,7 @@ Start with the project documentation:
 | **mcpkit** | [docs.rs/mcpkit](https://docs.rs/mcpkit) \| [GitHub README](https://github.com/praxiomlabs/mcpkit#readme) |
 | **rust-mssql-driver** | [docs.rs/mssql-client](https://docs.rs/mssql-client) \| [GitHub README](https://github.com/praxiomlabs/rust-mssql-driver#readme) |
 | **mssql-mcp-server** | [GitHub README](https://github.com/praxiomlabs/mssql-mcp-server#readme) |
+| **rust-expect** | [docs.rs/rust-expect](https://docs.rs/rust-expect) \| [GitHub README](https://github.com/praxiomlabs/rust-expect#readme) |
 
 Each project includes:
 - API documentation on docs.rs
@@ -55,6 +56,7 @@ For bugs, feature requests, and technical questions:
    - [mcpkit issues](https://github.com/praxiomlabs/mcpkit/issues)
    - [rust-mssql-driver issues](https://github.com/praxiomlabs/rust-mssql-driver/issues)
    - [mssql-mcp-server issues](https://github.com/praxiomlabs/mssql-mcp-server/issues)
+   - [rust-expect issues](https://github.com/praxiomlabs/rust-expect/issues)
 3. **Use issue templates** when available — they help us help you faster
 
 ### What to Include
@@ -95,7 +97,7 @@ Here's my minimal reproduction:
 
 **Q: What Rust version do I need?**
 
-A: All Praxiom Labs projects require Rust 1.85 or later (2024 Edition). Check your version with `rustc --version` and update with `rustup update stable`.
+A: All Praxiom Labs projects require Rust 2024 Edition. Most projects require Rust 1.85+, though some (like rust-expect) require 1.88+. Check each project's README or Cargo.toml for its specific MSRV. Update with `rustup update stable`.
 
 **Q: Are these projects production-ready?**
 
@@ -116,7 +118,7 @@ We support both SPDX and CycloneDX formats.
 
 **Q: What is your MSRV policy?**
 
-A: All projects require Rust 1.85+ (2024 Edition). MSRV bumps require a minor version increment. See [VERSIONING.md](VERSIONING.md) for full details.
+A: All projects require Rust 2024 Edition (1.85+), with some projects requiring newer versions (e.g., rust-expect requires 1.88+). MSRV bumps require a minor version increment. See [VERSIONING.md](VERSIONING.md) for full details.
 
 **Q: How do you handle breaking changes?**
 
@@ -206,6 +208,29 @@ A: Add the server to your Claude Desktop configuration file (`claude_desktop_con
 }
 ```
 See the [README](https://github.com/praxiomlabs/mssql-mcp-server#readme) for full configuration options.
+
+### rust-expect (Terminal Automation)
+
+**Q: How is rust-expect different from expectrl or rexpect?**
+
+A: Key differences include async-first design with native Tokio integration, first-class Windows ConPTY support, built-in SSH backend with connection pooling and auto-reconnect, PII redaction, and Prometheus/OpenTelemetry metrics export.
+
+**Q: What platforms does rust-expect support?**
+
+A: Unix (Linux, macOS, BSD) via PTY and Windows 10+ via ConPTY. The API is identical across platforms.
+
+**Q: Can I use rust-expect for SSH automation?**
+
+A: Yes. Enable the `ssh` feature for full SSH support including connection pooling, resilient sessions with auto-reconnect, and multiple authentication methods (password, key, agent, keyboard-interactive).
+
+**Q: How do I match patterns in terminal output?**
+
+A: rust-expect supports literal strings, regex patterns, and glob patterns:
+```rust
+session.expect("$ ").await?;                           // Literal
+session.expect(Pattern::regex(r"\d+\.\d+\.\d+")).await?;  // Regex
+session.expect(Pattern::glob("*error*")).await?;       // Glob
+```
 
 ### Development & Building
 

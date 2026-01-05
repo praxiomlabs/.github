@@ -126,7 +126,7 @@ We follow a rolling support model aligned with the Rust ecosystem:
 
 ### MSRV (Minimum Supported Rust Version)
 
-All projects target **Rust 1.85+** (2024 Edition).
+All projects target **Rust 2024 Edition**. Most require **Rust 1.85+**, though some projects have higher requirements (e.g., rust-expect requires 1.88+). Check each project's `Cargo.toml` or README for its specific MSRV.
 
 - MSRV changes are documented in release notes
 - MSRV bumps require a minor version increment (0.x → 0.y)

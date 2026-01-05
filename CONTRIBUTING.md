@@ -82,7 +82,7 @@ Our `good first issue` labels indicate:
 
 All Praxiom Labs projects are written in Rust and share common tooling:
 
-- **Rust 1.85+** (2024 Edition)
+- **Rust 1.85+** (2024 Edition) — some projects require newer versions (see project README)
 - **Just** command runner ([installation](https://github.com/casey/just#installation))
 - **Git** for version control
 
