@@ -11,9 +11,9 @@
 [![Matrix](https://img.shields.io/badge/Matrix-%23praxiomlabs-000.svg?logo=matrix)](https://matrix.to/#/#praxiomlabs:matrix.org)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/praxiomlabs)
 
-**High-performance Rust infrastructure for AI systems and database connectivity.**
+**High-performance Rust infrastructure for AI systems, database connectivity, and terminal automation.**
 
-We build open-source tools that help developers integrate AI capabilities with enterprise data systems. All projects are written in Rust, emphasizing type safety, performance, and modern async patterns.
+We build open-source tools that help developers integrate AI capabilities with enterprise systems. All projects are written in Rust, emphasizing type safety, performance, and modern async patterns.
 
 ## Projects
 
@@ -76,6 +76,31 @@ MCP server enabling AI assistants to query SQL Server databases securely.
 
 ---
 
+### [rust-expect](https://github.com/praxiomlabs/rust-expect)
+
+Modern async-first terminal automation library, inspired by the classic [Expect](https://en.wikipedia.org/wiki/Expect) tool.
+
+[![Crates.io](https://img.shields.io/crates/v/rust-expect.svg)](https://crates.io/crates/rust-expect)
+[![docs.rs](https://docs.rs/rust-expect/badge.svg)](https://docs.rs/rust-expect)
+[![Downloads](https://img.shields.io/crates/d/rust-expect.svg)](https://crates.io/crates/rust-expect)
+
+| Feature | Description |
+|---------|-------------|
+| Async-First | Native Tokio integration, non-blocking I/O |
+| Cross-Platform | Single API for Unix (PTY) and Windows (ConPTY) |
+| Pattern Matching | Literal, regex, and glob patterns with type safety |
+| SSH Backend | Connection pooling, resilient sessions, auto-reconnect |
+| Screen Emulation | Full VT100 support with visual diff |
+| PII Protection | Built-in sensitive data redaction |
+| Observability | Prometheus and OpenTelemetry metrics export |
+
+```toml
+[dependencies]
+rust-expect = "0.1"
+```
+
+---
+
 ## Getting Started
 
 ### Prerequisites
@@ -109,6 +134,23 @@ let client = Client::connect("Server=localhost;Database=mydb;...").await?;
 let rows = client.query("SELECT * FROM users WHERE id = @p1", &[&1]).await?;
 ```
 
+### Quick Start with rust-expect
+
+```rust
+use rust_expect::prelude::*;
+
+#[tokio::main]
+async fn main() -> Result<(), Box<dyn std::error::Error>> {
+    let mut session = Session::spawn("bash")?;
+
+    session.expect("$ ").await?;
+    session.send_line("echo hello").await?;
+    session.expect("hello").await?;
+
+    Ok(())
+}
+```
+
 ---
 
 ## Quick Links
@@ -117,8 +159,10 @@ let rows = client.query("SELECT * FROM users WHERE id = @p1", &[&1]).await?;
 |----------|------|
 | **mcpkit on crates.io** | [crates.io/crates/mcpkit](https://crates.io/crates/mcpkit) |
 | **mssql-client on crates.io** | [crates.io/crates/mssql-client](https://crates.io/crates/mssql-client) |
+| **rust-expect on crates.io** | [crates.io/crates/rust-expect](https://crates.io/crates/rust-expect) |
 | **mcpkit API Docs** | [docs.rs/mcpkit](https://docs.rs/mcpkit) |
 | **mssql-client API Docs** | [docs.rs/mssql-client](https://docs.rs/mssql-client) |
+| **rust-expect API Docs** | [docs.rs/rust-expect](https://docs.rs/rust-expect) |
 | **MCP Specification** | [modelcontextprotocol.io](https://modelcontextprotocol.io/specification/2025-11-25) |
 | **Governance Model** | [GOVERNANCE.md](https://github.com/praxiomlabs/.github/blob/main/GOVERNANCE.md) |
 | **Dependency Policy** | [DEPENDENCIES.md](https://github.com/praxiomlabs/.github/blob/main/DEPENDENCIES.md) |
@@ -137,6 +181,7 @@ All projects are under active development and follow [Semantic Versioning](https
 | mcpkit | 0.5.x | Pre-1.0, API stabilizing | 1.85 |
 | mssql-client | 0.3.x | Pre-1.0, API stabilizing | 1.85 |
 | mssql-mcp-server | 0.1.x | Early development | 1.85 |
+| rust-expect | 0.1.x | Pre-1.0, API stabilizing | 1.88 |
 
 Pre-1.0 versions may have breaking changes between minor releases. See individual project CHANGELOGs for migration guides.
 
