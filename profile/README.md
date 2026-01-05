@@ -11,9 +11,9 @@
 [![Matrix](https://img.shields.io/badge/Matrix-%23praxiomlabs-000.svg?logo=matrix)](https://matrix.to/#/#praxiomlabs:matrix.org)
 [![Discord](https://img.shields.io/badge/Discord-Join-5865F2.svg?logo=discord&logoColor=white)](https://discord.gg/praxiomlabs)
 
-**High-performance Rust infrastructure for AI systems, database connectivity, and terminal automation.**
+**High-performance Rust libraries for systems programming.**
 
-We build open-source tools that help developers integrate AI capabilities with enterprise systems. All projects are written in Rust, emphasizing type safety, performance, and modern async patterns.
+We build open-source tools for AI integration, database connectivity, and terminal automation. All projects are written in Rust, emphasizing type safety, performance, and modern async patterns.
 
 ## Projects
 
